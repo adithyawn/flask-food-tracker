@@ -1,0 +1,20 @@
+#ini bisa jalan di cmd
+>>> date = '2017-01-28'
+>>> from datetime import datetime
+>>> database_date = datetime.strptime(date, '%Y-%m-%d')
+>>> database_date
+datetime.datetime(2017, 1, 28, 0, 0)
+>>> final_database_date = datetime.strftime(database_date, '%Y-%m-%d')
+>>> final_database_date
+'2017-01-28'
+>>> pretty_date = datetime.strftime(database_date, '%B %d, %Y')
+>>> pretty_date
+'January 28, 2017'
+
+SQL :
+sqlite
+sqlite> sqlite3 food_log.db
+sqlite> .tables;
+sqlite> delete from log_date where id>1;
+sqlite> select * from log_date;
+1|20201010
